@@ -14,7 +14,7 @@ const BookForm = () => {
   const handleRandomButton = () => {
     const randomIndex = Math.floor(Math.random() * booksData.length)
     const randomBook = booksData[randomIndex]
-    const randomBookWithID = { ...randomBook, id: uuidv4() }
+    const randomBookWithID = { ...randomBook, id: uuidv4(), isFavourite: false }
     dispatch(addBook(randomBookWithID))
   }
 
@@ -25,6 +25,7 @@ const BookForm = () => {
         title,
         author,
         id: uuidv4(),
+        isFavourite: false,
       }
       dispatch(addBook(book))
       setTitle('')
