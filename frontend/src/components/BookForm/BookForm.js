@@ -3,7 +3,7 @@ import './BookForm.css'
 import { useDispatch } from 'react-redux'
 import booksData from '../../data/books.json'
 import createBookWithID from '../../utils/createBookwithID'
-import { addBook } from '../../redux/slices/bookSlice'
+import { addBook, thunkFunction } from '../../redux/slices/bookSlice'
 import axios from 'axios'
 
 const BookForm = () => {
@@ -27,15 +27,9 @@ const BookForm = () => {
   }
 
   const addRandomBookViaAPIHandle = async () => {
-    try {
-      const res = await axios.get('http://localhost:4000/random-book')
-      if (res?.data?.title && res?.data?.author) {
-        dispatch(addBook(createBookWithID(res.data, 'API')))
-      }
-    } catch (error) {
-      console.log('Error fetching random book', error)
-    }
+    dispatch(thunkFunction)
   }
+
   return (
     <div className="app-block book-form">
       <h2>Add a New Book</h2>
