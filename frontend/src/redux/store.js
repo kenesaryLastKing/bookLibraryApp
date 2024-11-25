@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import booksReducer from './slices/bookSlice'
 import filterReducer from './slices/filterSlice'
-import errorReducer from './slices/errorlSice.js'
+import errorReducer from './slices/errorlSlice.js'
 
 const store = configureStore({
   reducer: {

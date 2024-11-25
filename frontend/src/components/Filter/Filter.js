@@ -39,7 +39,6 @@ const Filter = () => {
             value={titleFilter}
             type="text"
             placeholder="Filter by title..."
-            disabled={authorFilter ? true : undefined}
           />
         </div>
         <div className="filter-group">
@@ -48,7 +47,6 @@ const Filter = () => {
             value={authorFilter}
             type="text"
             placeholder="Filter by author..."
-            disabled={titleFilter ? true : undefined}
           />
         </div>
         <div className="filter-group">

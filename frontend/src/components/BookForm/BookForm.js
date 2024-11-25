@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import booksData from '../../data/books.json'
 import createBookWithID from '../../utils/createBookwithID'
 import { addBook, fetchBook } from '../../redux/slices/bookSlice'
-import { setError } from '../../redux/slices/errorlSice'
+import { setError } from '../../redux/slices/errorlSlice'
 
 const BookForm = () => {
   const [title, setTitle] = useState('')
